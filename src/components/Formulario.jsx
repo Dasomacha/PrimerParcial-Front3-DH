@@ -9,11 +9,11 @@ function Formulario() {
   const [artist, setArtist] = useState('');
   const [name, setName] = useState('');
   const [error, setError] = useState('');
-  const [cards, setCards] = useState([]); // Mantener las cards
+  const [cards, setCards] = useState([]); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError(''); // Restablecer el error
+    setError('');
 
     // Validaciones de los campos obligatorios
     if (!name || !song || !artist) {
@@ -57,8 +57,7 @@ function Formulario() {
       </form>
 
       {error && <ErrorMessage message={error} />}
-      
-      {/* Mostrar las Cards ingresadas */}
+
       {cards.map((card, index) => (
         <Card key={index} song={card.song} artist={card.artist} name={card.name} />
       ))}
