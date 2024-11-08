@@ -1,10 +1,10 @@
-function App() {
-  //Aqui deberias agregar los estados y los handlers para los inputs
+import Formulario from './components/Formulario';
 
+function App() {
   return (
-    <div className="App">
-      <h1>Elige un color</h1>
-      <form>{/* aqui deberias escribir tu codigo */}</form>
+    <div style={{ padding: '20px' }}>
+      <h1>Formulario de Canción Fav</h1>
+      <Formulario />
     </div>
   );
 }
